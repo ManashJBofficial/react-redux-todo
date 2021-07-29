@@ -39,23 +39,26 @@ const HomeScreen = () => {
                     return (
                         
                         <FormContainer key={e.id} >
-                            <Card >
-                                <ListGroup variant="flush">
+                        <div className='text-center '>
+                        <Card className='mb-3'>
+                                <ListGroup variant="flush" >
                                 
                                     <ListGroup.Item>
-                                        <Row className='justify-content-md-center'>
-                                            <Col sm={6} md={10} lg={10}>
+                                        <Row className='d-flex justify-content-md-center'>
+                                            <Col >
                                                 <h2>{e.data}</h2>
                                             </Col>
-                                            <Col sm={6} md={2} lg={2}>
+                                            <Col>
                                                 <h2>
-                                                    <i className="fas fa-trash-alt" title='Delete Item' onClick={()=>dispatch(del(e.id))}></i>
+                                                    <i className="fas fa-trash-alt" style={{color:'red',cursor:'pointer'}} title='Delete Item' onClick={()=>dispatch(del(e.id))}></i>
                                                 </h2>
                                             </Col>
                                         </Row>
                                     </ListGroup.Item>
                                 </ListGroup>
                             </Card>
+                        </div>
+                            
                         </FormContainer>
                         
                     )
